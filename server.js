@@ -39,7 +39,7 @@ app.use("/api/supervisor-observations", supervisorObservationsRoutes);
 
 app.use('/api/scans', scanRoutes);
 app.use('/api', supervisorRoutes);
-app.use('/api', loginRoutes);
+app.use('/api/login', loginRoutes);
 app.use('/api/users', userRoutes);
 
 app.listen(5000, () => console.log('Server running on port 5000'));
