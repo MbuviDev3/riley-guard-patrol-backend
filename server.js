@@ -12,7 +12,7 @@ import reportsRouter from './routes/reports.js'
 import supervisorObservationsRoutes from "./routes/supervisorObservations.js";
 
 const app = express();
-app.use(cors({ origin: 'http://localhost:3000', credentials: true }));
+app.use(cors({ origin: ['http://localhost:3000', 'http://rileypatrol.co.ke'], credentials: true }));
 app.use(express.json());
 app.use('/uploads', express.static(path.join(process.cwd(), 'uploads')));
 app.use('/api/assignments', assignmentRoutes);
