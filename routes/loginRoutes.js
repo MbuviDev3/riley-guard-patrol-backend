@@ -4,7 +4,7 @@ import bcrypt from "bcryptjs";
 
 const router = express.Router();
 
-router.post("/login", async (req, res) => {
+router.post("/", async (req, res) => {
   const { user_id, password } = req.body;
 
   if (!user_id || !password) {
