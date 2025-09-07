@@ -9,7 +9,7 @@ import supervisorRoutes from './routes/supervisorRoutes.js';
 import observations from './routes/observations.js'
 import assignmentRoutes from './routes/assignments.js'
 import reportsRouter from './routes/reports.js'
-
+import supervisorObservationsRoutes from "./routes/supervisorObservations.js";
 
 const app = express();
 app.use(cors({ origin: 'http://localhost:3000', credentials: true }));
@@ -19,6 +19,7 @@ app.use('/api/assignments', assignmentRoutes);
 app.use('/api/checkpoints', checkpoints);
 app.use('/api/observations', observations);
 app.use('/api/reports', reportsRouter)
+app.use("/api/supervisor-observations", supervisorObservationsRoutes);
 
 app.use('/api/scans', scanRoutes);
 app.use('/api', supervisorRoutes);

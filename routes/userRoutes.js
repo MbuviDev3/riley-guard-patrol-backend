@@ -53,7 +53,7 @@ router.get("/", async (req, res) => {
 router.get("/guards", async (req, res) => {
   try {
     const result = await pool.query(
-      "SELECT id, first_name, second_name FROM users WHERE role = 'Guard'"
+      "SELECT id, first_name, second_name FROM users WHERE role = 'guard'"
     );
     res.json({ guards: result.rows });
   } catch (err) {
