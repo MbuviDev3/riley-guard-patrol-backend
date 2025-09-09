@@ -13,7 +13,7 @@ import supervisorObservationsRoutes from "./routes/supervisorObservations.js";
 
 const app = express();
 const allowedOrigins = [
-  "http://rileypatrol.co.ke", // production
+  "http://rileypatrol.co.ke",  // production
   "https://rileypatrol.co.ke" // production (SSL)
 ];
 
@@ -30,7 +30,7 @@ app.use(cors({
 }));
 
 app.use(express.json());
-app.use('/uploads', express.static(path.join(process.cwd(), 'uploads')));
+app.use('/uploads', express.static('uploads'));
 app.use('/api/assignments', assignmentRoutes);
 app.use('/api/checkpoints', checkpoints);
 app.use('/api/observations', observations);
